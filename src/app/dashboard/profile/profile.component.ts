@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import * as $ from 'jQuery';
+import * as $ from 'jquery';
 
 
 import { ProfileService } from 'src/app/services/users/profile.service';

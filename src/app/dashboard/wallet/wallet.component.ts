@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import * as $ from 'jQuery';
+import * as $ from 'jquery';
 import { ModalManager } from 'ngb-modal';
 import { ModalService } from 'src/app/services/modal/modal.service';
 import { ProfileService } from 'src/app/services/users/profile.service';
