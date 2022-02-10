@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api_url: 'http://localhost:9090/v1'
+  api_url: 'https://thedivasdudecore.herokuapp.com/'
 };
