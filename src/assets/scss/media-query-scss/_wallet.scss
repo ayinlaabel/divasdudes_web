@@ -1,0 +1,176 @@
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media screen and (min-width: 320px) and (max-width: 576px) { 
+//Import SCSS Variables
+@import '/src/assets/scss/colors';
+
+.wallet {
+
+    &_header {
+        display: flex;
+        grid-template-areas: 
+        'balance days days';
+        margin-bottom: 3rem;
+        grid-template-columns: repeat(3, 1fr);
+
+
+
+        h1 {
+          font-size: 1.5rem;
+      }
+    
+        .balance {
+            grid-area: balance;
+            // width: 30rem;
+            // padding: 1rem 3rem;
+    
+    
+            &_container{
+                // position: relative;
+                // background: rgb(9,9,121);
+                background: linear-gradient(120deg, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+                // padding: 2rem;
+                // box-shadow: 1px 1px 12px #000;
+                // border-radius: 6px;
+                // text-align: center;
+                color: $text-white;
+    
+                span {
+                    position: absolute;
+                    top: 5px;
+                    right: 10px;
+                    font-size: 5rem;
+                    opacity: .5;
+                    color: $secondary-color;
+                }
+            }
+        }
+        .date {
+            grid-area: date;
+            display: none;
+    
+            &_container {
+                    background: $other-color-1;
+                    color: $text-white;
+    
+                    span {
+                        color: lighten($secondary-color, 10) !important;
+                    }
+                }
+    
+                
+        }
+        .time {
+            grid-area: time;
+            display: none;
+            &_container{
+                background: $primary-color;
+                color: $text-white;
+            }
+        }
+    
+        .balance,
+        .date,
+        .time{
+    
+            width: 25rem;
+            padding: 1rem 3rem;
+    
+            &_container{
+                position: relative;
+                padding: 2rem;
+                box-shadow: 1px 1px 12px #cecece;
+                border-radius: 6px;
+                text-align: center;
+    
+                span {
+                    position: absolute;
+                    top: 5px;
+                    right: 10px;
+                    font-size: 5rem;
+                    opacity: .5;
+                    color: $secondary-color;
+                }
+            }
+        }
+    
+    }
+
+    &_a{
+        display: grid;
+        place-items: center;
+        grid-template-areas: 
+        'send receive airtime bill';
+        margin: .5rem;
+        padding: .5rem;
+        background: $bg-light;
+        max-width: 100%;
+
+        border-radius: 6px;
+
+        .send,
+        .receive,
+        .bill,
+        .airtime {
+            padding: .5rem;
+            border-radius: 5px;
+            span{
+                text-align: center;
+                display: block;
+                // color: $primary-color;
+                padding: .2rem;
+
+                a {
+                    font-size: .7rem;
+                }
+            }
+            
+            i {
+                font-size: 1rem;
+                padding: .5rem;
+                height: 2rem;
+                width: 2rem;
+                text-align: center;
+                background: $primary-color;
+                color: $text-white;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &_t {
+      margin: .5rem;
+      padding: 1rem;
+      border-radius: 5px;
+      background: $bg-light;
+      max-width: 100%;
+    }
+
+    a{
+        cursor: pointer;
+    }
+}
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media screen and (min-width: 577px) and (min-width: 768px) { 
+    
+ }
+
+// Large devices (desktops, 992px and up)
+@media screen and (min-width: 993px) and (min-width: 992px) { 
+    
+ }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+    
+ }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { 
+    
+ }

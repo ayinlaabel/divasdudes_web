@@ -1,0 +1,339 @@
+@import '/src/assets/scss/colors';
+
+.dashboard {
+    margin-right: 1rem;
+
+    &_top {
+        display: grid;
+        grid-template-areas: 
+        'dashboard_top-short dashboard_top-statistics';
+        grid-template-columns: repeat(2, 1fr);
+        height: 10rem;
+        margin-bottom: 2rem;
+
+        &-short {
+            background: $bg-light;
+            width: 20rem;
+            border-radius: 5px;
+            box-shadow: 1px 1px 6px rgba(0, 0, 0, .1);
+            display: grid;
+            place-items: center;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        &-statistics {
+            display: flex;
+            background: $bg-light;
+            height: 10rem ;
+            width: 46rem;
+            border-radius: 5px;
+            padding-left: 2rem;
+            box-shadow: 1px 1px 6px rgba(0, 0, 0, .1);
+            align-content: center;
+            padding: 2.5rem 2rem;
+            // justify-content: center;
+
+            .user {
+                display: grid;
+                grid-template-areas:
+                'user weekly saving';
+                width: 100%;
+
+                .icon {
+                    display: flex;
+                    height: 5rem;
+                    width: 5rem;
+                    background: #bae0ff
+                    ;
+                    color: #014780;
+                    border-radius: 50%;
+                    align-items: center;
+                    justify-content: center;
+
+                    i {
+                        font-size: 2rem;
+                    }
+                }
+
+                &_stat {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    h3,
+                    p {
+                        width: 100%;
+                        display: block;
+                    }
+                    h3 {
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 2rem;
+                        padding: 0;
+                        margin: 1.5rem 0 0 0;
+                        line-height: .5;
+                    }
+
+                    p {
+                        font-size: .7rem;
+                        color: $text-primary;
+                    }
+                }
+                
+            }
+
+            .weekly {
+                display: grid;
+                grid-template-areas:
+                'user weekly saving';
+                width: 100%;
+
+                .icon {
+                    display: flex;
+                    height: 5rem;
+                    width: 5rem;
+                    background: #bae0ff
+                    ;
+                    color: #014780;
+                    border-radius: 50%;
+                    align-items: center;
+                    justify-content: center;
+
+                    i {
+                        font-size: 3rem;
+                    }
+                }
+
+                &_stat {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    h3,
+                    p {
+                        width: 100%;
+                        display: block;
+                    }
+                    h3 {
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 2rem;
+                        padding: 0;
+                        margin: 1.5rem 0 0 0;
+                        line-height: 1;
+                    }
+
+                    p {
+                        font-size: .8rem;
+                        color: $text-primary;
+                    }
+                }
+                
+            }
+
+            .savings {
+                display: grid;
+                grid-template-areas:
+                'user weekly saving';
+                width: 100%;
+
+                .icon {
+                    display: flex;
+                    height: 5rem;
+                    width: 5rem;
+                    background: #bae0ff
+                    ;
+                    color: #014780;
+                    border-radius: 50%;
+                    align-items: center;
+                    justify-content: center;
+
+                    i {
+                        font-size: 2rem;
+                    }
+                }
+
+                &_stat {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    h3,
+                    p {
+                        width: 100%;
+                        display: block;
+                    }
+                    h3 {
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 2.5rem;
+                        padding: 0;
+                        margin: 1.5rem 0 0 0;
+                        line-height: 1;
+                    }
+
+                    p {
+                        font-size: .8rem;
+                        color: $text-primary;
+                        text-align: center;
+                    }
+                }
+                
+            }
+        }
+
+    }
+
+    &_middle {
+        display: grid;
+        grid-template-areas: 
+        'dashboard_middle-wallet dashboard_middle-income';
+        grid-template-columns: repeat(2, 1fr);
+        height: 22rem;
+
+        &-wallet {
+            display: grid;
+            grid-template-areas:
+            'wallet'
+            'earning';
+         grid-template-columns: repeat(1, 2fr);
+
+            height: 10rem;
+            width: 20rem;
+            // background: $bg-light;
+            
+            .wallet {
+                display: grid;
+                grid-template-areas:
+                'wallet_in wallet_out';
+                height: 10rem;
+                margin-bottom: 2rem;
+
+
+                 .wallet_in {
+                    font-family: 'Open Sans', sans-serif;
+                    grid-area: wallet_in;
+                    margin-right: .5rem;
+                    width: 9.5rem;
+                    background: $bg-light;
+                    box-shadow: 1px 1px 6px rgba(0, 0, 0, .1);
+                    padding: .5rem 1rem;
+                    line-height: .5;
+
+                    h3 {
+                        font-size: 1.5rem;
+                    }p {
+                        font-size: .8rem;
+                        font-weight: 600;
+                    }
+
+                    .icon {
+                        font-size: 4rem;
+                        color: $primary-color;
+                    }
+                    
+                }
+                
+                .wallet_out {
+                    font-family: 'Open Sans', sans-serif;
+                    grid-area: wallet_out;
+                    width: 9.5rem;
+                    background: $bg-light;
+                    box-shadow: 1px 1px 6px rgba(0, 0, 0, .1);
+                    padding: .5rem 1rem;
+                    line-height: .5;
+                    text-align: center;
+
+                    h3 {
+                        font-size: 1.5rem;
+                    }
+                    
+                    p {
+                        font-size: .8rem;
+                        font-weight: 600;
+                    }
+
+                    .icon {
+                        font-size: 4rem;
+
+                        color: #014780;
+                    }
+                }
+            }
+            
+            .earning {
+                background: $bg-light;
+                width: 20rem;
+                height: 10rem;
+                border-radius: 5px;
+                box-shadow: 1px 1px 6px rgba(0, 0, 0, .1);
+                display: flex;
+                padding: .7rem;
+
+                .chart {
+                    display: grid;
+                    place-items: center;
+                }
+                
+                .title {
+                    // font-size: .7rem;
+                    width: 70%;
+
+
+                    p{
+                        font-weight: 500;
+                    }
+                }
+
+                .daily {
+                    display: flex;
+                    
+                    
+                    .color {
+                        margin: 0 .5rem;
+                        height: .8rem;
+                        width: .8rem;
+                        background: rgb(168, 56, 93);
+                    }
+                }
+                .weekly {
+                    display: flex;
+                    
+                    
+                    .color {
+                        margin: 0 .5rem;
+                        height: .8rem;
+                        width: .8rem;
+                        background: rgb(122, 163, 229);
+                    }
+                }
+                .monthly {
+                    display: flex;
+                    
+                    
+                    .color {
+                        margin: 0 .5rem;
+                        height: .8rem;
+                        width: .8rem;
+                        background: rgb(162, 126, 168);
+                    }
+                }
+            }
+        }
+        
+        &-income {
+            grid-area: dashboard_middle-income;
+            background: $bg-light;
+            width: 46rem;
+            border-radius: 5px;
+            padding-left: 2rem;
+            box-shadow: 1px 1px 6px rgba(0, 0, 0, .1);
+            display: grid;
+            place-items: center;
+            text-transform: uppercase;
+            font-weight: 600;
+
+        }
+
+    }
+}

@@ -1,0 +1,26 @@
+//Import SCSS variable
+@import '/src/assets/scss/colors';
+
+.input-field{
+    width: 100%;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    height: 100%;
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 1rem;
+
+    input[type="date"],
+    input[type="datetime-local"],
+    input[type="time"]{
+        height: 100%;
+        padding: 1rem;
+        margin-top: 10px;
+    }
+
+    & label {
+        position: absolute;
+        font-size: .8rem;
+    }
+}

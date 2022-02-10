@@ -1,0 +1,65 @@
+//Import variable
+@import '/src/assets/scss/colors';
+.jw-dashboard{
+    background: $bg-main;
+    width: 100%;
+    
+    .jw-body {
+        position: relative;
+        background: $bg-main;
+        margin-left: 15rem;
+        padding: 4rem 0;
+        transition: all .6s ease;
+        z-index: 9;
+        
+        &.show{
+            // margin: 0 2rem 0 15rem;
+            margin-left: 4rem;
+        }
+    
+        
+    }
+
+    .jw-nav_top {
+        position: fixed;
+        z-index: 99;
+        height: 4rem;
+        width: 100%;
+        // text-align: right;
+        display: flex;
+        padding: 1rem;
+        margin-left: 15rem;
+        background: $secondary-color;
+        transition: all .6s ease;
+
+        &-left {
+            text-align: left;
+            color: $primary-color;
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+
+        span {
+            color: $text-primary;
+            cursor: pointer;
+        }
+
+        &.show {
+            margin-left: 4rem;
+        }
+    }
+
+    .menu {
+        opacity: 0;
+        width: 0;
+    }
+
+    .isMobile{
+        display: none;
+    }
+}
+
+
+@import '/src/assets/scss/mediaQuery.scss';
+
+

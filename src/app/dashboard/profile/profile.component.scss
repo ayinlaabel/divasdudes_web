@@ -1,0 +1,71 @@
+//Import SCSS Variables
+@import '/src/assets/scss/colors';
+
+.profile {
+
+    &_body {
+        display: flex;
+
+        .user_profile {
+            grid-area: user_profile;
+
+            background: $bg-light;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+            padding-bottom: 2rem;
+            
+            &-header{
+                border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+                background: url(/assets/background/bg-3.jpg);
+                padding: 5rem;
+            }
+
+            .profile_picture {
+                position: relative;
+                display: grid;
+                place-items: center;
+                height: 8rem;
+                
+                img {
+                    position: absolute;
+                    top: -4rem;
+                    height: 10rem;
+                    width: 10rem;
+                    border-radius: 50%;
+                    border: 5px solid $bg-light;
+                }
+            }
+            
+            &-body {
+                padding: 1rem;
+                text-align: center;
+
+                button {
+                    text-transform: uppercase;
+                }
+
+                .profile-details {
+                    margin-bottom: 3rem;
+                    h2 {
+                        text-transform: uppercase;
+                        padding: 0;
+                        margin: 0;
+                        line-height: 1;
+                    }
+                }
+
+            }
+        }
+
+        .edit_profile{
+            grid-area: edit_profile;
+            margin-left: 1rem;
+
+            background: $bg-light;
+            padding: 0 2rem;
+        }
+    }
+}
+
+@import "/src/assets/scss/mediaQuery.scss";

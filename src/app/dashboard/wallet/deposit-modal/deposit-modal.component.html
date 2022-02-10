@@ -1,0 +1,38 @@
+
+<div class="modal-header">
+    <h5 class="modal-title">Credit Wallet/Saving</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)='closeModal()'></button>
+  </div>
+  <div class="modal-body">
+    <!-- <h3>Credit your wallet</h3> -->
+        <form >
+            <div class="input-field">
+                <select [(ngModel)]="paymentTo" name="paymentTo">
+                    <option selected disabled value="">--- Select Payment ---</option>
+                    <option value="wallet">Wallet</option>
+                    <option value="savings">Savings</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <input [(ngModel)]="amount" name="amount" type="text" placeholder="Enter amount">
+            </div>
+            
+            <button class="jw-btn jw-btn-2 w-25" (click)="topUp()">Topup</button>
+        </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="jw-btn jw-btn-secondary" data-bs-dismiss="modal" (click)='closeModal()'>Close</button>
+    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+  </div>
+<div class="modal-header" *ngIf='isModals'>
+    <div class="close-btn" (click)='closeModal()'>
+        <span><i class="far fa-times-circle"></i></span>
+    </div>
+    <div class="modal_container">
+        <h3>Credit your wallet</h3>
+        <form >
+            <input [(ngModel)]="amount" name="amount" type="text">
+            <button (click)="topUp()">Topup</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+<section class="nav">
+    <div class="nav_top">
+
+        <div class="nav_top-item">
+            <div class="nav_top-item-left">
+                <div class="nav_top-link"><i class="fas fa-envelope"></i></div>
+                <div class="nav_top-link"><i class="fas fa-moon"></i></div>
+                <div class="nav_top-link"><i class="fas fa-bell"></i></div>
+            </div>
+            <div class="nav_top-item-right">
+                <div class="nav_top-link admin">
+                    {{ user.firstName }} {{ user.lastName }}
+                    <span class="admin">{{ user.roles | titlecase}}</span>
+                </div>
+                <div class="nav_top-img">
+                    <img src="/assets//images/avatar.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- <span class="user">
+            <span class="name">Krane Abel</span>
+        </span>
+        <span (click)="logout()">
+            Logout
+        </span> -->
+    </div>
+    <div class="nav_side">
+        <div class="nav_side-header">
+            <div class="icon_btn" (click)="toggleSideBar()">
+                <!-- <i class="far fa-arrow-alt-circle-right fa-2x"></i> -->
+            </div>
+            <hr>
+        </div>
+        <div class="navbar">
+            <div class="navbar_item">
+                <a href="/admin/dashboard" class="nav_link">
+                    <span class="nav_link-icon"><i class="fas fa-tachometer-alt"></i></span>
+                    <span class="nav_link-title">Dashboard</span> 
+                </a>
+            </div>
+            <div class="navbar_item">
+                <a href="/admin/w" class="nav_link">
+                    <span class="nav_link-icon"><i class="fas fa-wallet"></i></span>
+                    <span class="nav_link-title">Wallet</span> 
+                </a>
+            </div>
+            <div class="navbar_item">
+                <a href="admin/t" class="nav_link">
+                    <span class="nav_link-icon"><i class="fas fa-exchange-alt"></i></span>
+                    <span class="nav_link-title">Transaction</span> 
+                </a>
+            </div>
+            <div class="navbar_item">
+                <a href="/admin/users" class="nav_link">
+                    <span class="nav_link-icon"><i class="fas fa-user"></i></span>
+                    <span class="nav_link-title">User</span> 
+                </a>
+            </div>
+            <div class="navbar_item">
+                <a href="admin/c" class="nav_link">
+                    <span class="nav_link-icon"><i class="fas fa-plus-square"></i></span>
+                    <span class="nav_link-title">Create</span> 
+                </a>
+            </div>
+            <div class="navbar_item">
+                <a href="dashboard/s" class="nav_link">
+                    <span class="nav_link-icon"><i class="fas fa-cog"></i></span>
+                    <span class="nav_link-title">Setting</span> 
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

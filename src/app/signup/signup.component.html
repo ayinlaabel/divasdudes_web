@@ -1,0 +1,36 @@
+<section class="signup">
+    <div class="signup_container">
+        <div class="signup_branding"></div>
+    <div class="signup_details">
+        <div class="signup_details-header">
+            <h2>Sign Up</h2>
+        </div>
+        <form class="signup_details-form col" (submit)="submitForm()">
+            <div class="input-field col-50">
+                <input [(ngModel)]="model.firstName" name="firstName" type="text" required>
+                <label >First Name</label>
+                <span></span>
+            </div>
+            <div class="input-field col-50">
+                <input [(ngModel)]="model.lastName" name="lastName" type="text" required>
+                <label>Last Name</label>
+                <span></span>
+            </div>
+            <div class="input-field col-100">
+                <input [(ngModel)]="model.email" name="email" type="text" required>
+                <label>Email</label>
+                <span></span>
+            </div>
+            <div class="input-field col-100">
+                <input [(ngModel)]="model.password" name="password" type="password" required>
+                <label>Password</label>
+                <span></span>
+            </div>
+            <button class="btn btn-primary d-block w-50" >Submit</button>
+        </form>
+        <div class="login">
+            <p>Already have an <a href="/login">Account?</a></p>
+        </div>
+    </div>
+    </div>
+</section>

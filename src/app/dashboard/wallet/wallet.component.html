@@ -1,0 +1,66 @@
+<div class="wallet">
+    <div class="wallet_header">
+        <div class="balance">
+            <div class="balance_container">
+                <div class="balance_header">
+                    <p>wallet</p>
+                </div>
+                <div class="balance_body">
+                    <h1>
+                        {{ balance | currency: 'NGN':'symbol'}}
+                    </h1>
+                </div>
+                <span><i class="fab fa-cc-mastercard"></i></span>
+            </div>
+    
+        </div>
+        <div class="date">
+            <div class="date_container">
+                <div class="date_header">
+                    <p>Savings</p>
+                </div>
+                <div class="date_body">
+                    <h1>
+                        {{ date}}
+                    </h1>
+                </div>
+                <span><i class="fas fa-calendar-day"></i></span>
+            </div>
+        </div>
+        <div class="time">
+            <div class="time_container">
+                <div class="time_header">
+                    <p>Present Time</p>
+                </div>
+                <div class="time_body">
+                    <h1>
+                        {{ time }}
+                    </h1>
+                </div>
+                <span><i class="far fa-clock"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="wallet_a">
+        <div class="send">
+            <span><i class="fas fa-paper-plane"></i></span>
+            <span><a (click)="openDeposit()">Send</a></span>
+        </div>
+        <div class="receive">
+            <span><i class="fas fa-satellite-dish"></i></span>
+            <span><a href="">Receive</a></span>
+        </div>
+        <div class="airtime">
+            <span><i class="fas fa-sim-card"></i></span>
+            <span><a href="">Airtime</a></span>
+        </div>
+        <div class="bill">
+            <span><i class="fas fa-wallet"></i></span>
+            <span><a href="">Bills</a></span>
+        </div>
+    </div>
+    <div class="wallet_t">
+        <app-transaction></app-transaction>
+    </div>
+</div>
+

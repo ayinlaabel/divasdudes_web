@@ -1,0 +1,42 @@
+<div class="jw-dashboard">
+    <div class="jw-navbar">
+        <app-navbar></app-navbar>
+    </div>
+    <div class="jw-nav_top">
+        <div class="jw-nav_top-left">
+            <i class="fas fa-bars" (click)="toggleSideBar()"></i>
+        </div>
+        <span (click)="logout()">
+            Logout
+        </span>
+    </div>
+    <div class="isMobile">
+        <div class="menu-btn">
+            <i class="fas fa-bars  open" (click)="openMenu()"></i>
+            <i class="far fa-times-circle close disable" (click)="closeMenu()"></i>
+        </div>
+        <div class="menu-overlay"></div>
+        <div class="menu">
+            <ul class="menu_list">
+                <li class="menu_item">
+                    <a href="/dashboard/u" class="menu_link">Dashboard</a>
+                </li>
+                <li class="menu_item">
+                    <a href="/dashboard/w" class="menu_link">Wallet</a>
+                </li>
+                <li class="menu_item">
+                    <a href="/dashboard/t" class="menu_link">Transaction</a>
+                </li>
+                <li class="menu_item">
+                    <a href="/dashboard/p" class="menu_link">Profile</a>
+                </li>
+                <li class="menu_item">
+                    <a href="/dashboard/s" class="menu_link">Settings</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="jw-body">
+        <router-outlet></router-outlet>
+    </div>
+</div>

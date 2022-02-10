@@ -1,0 +1,173 @@
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media screen and (min-width: 320px) and (max-width: 576px) { 
+
+    .jw-dashboard{
+        background: $bg-main;
+        max-width: 100%;
+        
+        .jw-body {
+            position: relative;
+            background: $bg-main;
+            margin-left: 0;
+            padding: 0;
+            z-index: 9;
+            max-height: 100%;
+            transition: all .6s ease;
+            
+            &.show{
+                // margin: 0 2rem 0 15rem;
+                margin-left: 0;
+            }
+        
+            
+        }
+    
+        .jw-nav_top {
+            display: none;
+            position: fixed;
+            z-index: 99;
+            height: 4rem;
+            max-width: 100%;
+            // text-align: right;
+            // display: flex;
+            padding: 1rem;
+            margin-left: 0;
+            overflow: hidden;
+            background: $secondary-color;
+            transition: all .6s ease;
+    
+            &-left {
+                text-align: left;
+                color: $primary-color;
+                font-size: 1.3rem;
+                cursor: pointer;
+            }
+    
+            span {
+                color: $text-primary;
+                cursor: pointer;
+            }
+    
+            &.show {
+                margin-left: 0;
+            }
+        }
+
+        .isMobile {
+            height: 100%;
+            // position: relative;
+            padding: 0;
+            
+            .menu-btn {
+                font-size: 1.5rem;
+                z-index: 999;
+                position: fixed;
+                top: 35px;
+                right: 35px;
+                transform: rotate3d(90deg);
+                cursor: pointer;
+                transition: all .6s ease;
+
+
+                .open {
+                    color: $primary-color;
+                }
+
+                .disable {
+                    display: none;
+                }
+
+                .close {
+                    color: $text-white;
+                }
+            }
+
+            .menu-overlay {
+                position: fixed;
+                top: 47px;
+                right: 37px;
+                z-index: 99;
+                height: 1rem;
+                width: 1rem;
+                overflow: hidden;
+                transform: scale(0);
+                border-radius: 50%;
+                background: $primary-color;
+                transition: all .6s ease;
+
+                &.show {
+                    transform: scale(80);
+                }
+            }
+
+            .menu {
+               position: fixed;
+               top: 0;
+               left: 0;
+               height: 100vh;
+            //    width: 100%;
+               z-index: 998;
+            //    display: none;
+            overflow: hidden;
+               transition: all .7s ease;
+
+               opacity: 0;
+               width: 0;
+
+                &_list {
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 999;
+                    list-style: none;
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                }
+
+                &_item {
+                    margin: 1.5rem;
+                }
+
+                &_link {
+                    margin: 0;
+                    padding: 0;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    color: $text-white;
+                }
+
+                &.show {
+                    opacity: 1;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media screen and (min-width: 577px) and (min-width: 768px) { 
+    
+ }
+
+// Large devices (desktops, 992px and up)
+@media screen and (min-width: 993px) and (min-width: 992px) { 
+    
+ }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+    
+ }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { 
+    
+ }

@@ -1,0 +1,19 @@
+<section class="users">
+    <table>
+        <tr>
+            <th></th>
+            <th>Transaction</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor='let user of users'>
+            
+            <td></td>
+            <td>{{ user.firstName }} {{ user.lastName }}</td>
+            <td>{{ user.email }}</td>
+            <td>Pending</td>
+            <td>Pending</td>
+        </tr>
+    </table>
+</section>

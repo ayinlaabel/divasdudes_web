@@ -1,0 +1,63 @@
+<div class="header">
+    <div class="balance">
+        <div class="balance_container">
+            <div class="balance_header">
+                <p>Balance</p>
+            </div>
+            <div class="balance_body">
+                <h1>
+                    {{ balance | currency: 'NGN':'symbol'}}
+                </h1>
+            </div>
+            <span><i class="fab fa-cc-mastercard"></i></span>
+        </div>
+
+    </div>
+    <div class="date">
+        <div class="date_container">
+            <div class="date_header">
+                <p>Current Date</p>
+            </div>
+            <div class="date_body">
+                <h1>
+                    {{ date}}
+                </h1>
+            </div>
+            <span><i class="fas fa-calendar-day"></i></span>
+        </div>
+    </div>
+    <div class="time">
+        <div class="time_container">
+            <div class="time_header">
+                <p>Next Thrift in</p>
+            </div>
+            <div class="time_body">
+                <h1>
+                    {{ paymentDueDate }}
+                </h1>
+            </div>
+            <span><i class="far fa-clock"></i></span>
+        </div>
+    </div>
+</div>
+<div class="isMobile">
+    <div class="container">
+        <div class="top">
+            <sup>&#8358;</sup>
+            <p> {{ balance }}</p>
+        </div>
+        <div class="due">
+            <p>Your next payment due's on <b><em>{{ paymentDueDate }} days</em></b> on </p>
+        </div>
+    </div>
+</div>
+<div class="middle">
+    <div class="transaction_">
+        <app-transaction></app-transaction>
+    </div>
+    <div class="notification">
+        <div class="notification_header">
+            <h5>Notification</h5>
+        </div>
+    </div>
+</div>

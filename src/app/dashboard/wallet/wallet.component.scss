@@ -1,0 +1,150 @@
+//Import SCSS Variables
+@import '/src/assets/scss/colors';
+
+.wallet {
+
+    &_header {
+        display: flex;
+        grid-template-areas: 
+        'balance days days';
+        margin-bottom: 3rem;
+        grid-template-columns: repeat(3, 1fr);
+
+
+
+        h1 {
+          font-size: 1.5rem;
+      }
+    
+        .balance {
+            grid-area: balance;
+            // width: 30rem;
+            // padding: 1rem 3rem;
+    
+    
+            &_container{
+                // position: relative;
+                // background: rgb(9,9,121);
+                background: linear-gradient(120deg, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+                // padding: 2rem;
+                // box-shadow: 1px 1px 12px #000;
+                // border-radius: 6px;
+                // text-align: center;
+                color: $text-white;
+    
+                span {
+                    position: absolute;
+                    top: 5px;
+                    right: 10px;
+                    font-size: 5rem;
+                    opacity: .5;
+                    color: $secondary-color;
+                }
+            }
+        }
+        .date {
+            grid-area: date;
+    
+            &_container {
+                    background: $other-color-1;
+                    color: $text-white;
+    
+                    span {
+                        color: lighten($secondary-color, 10) !important;
+                    }
+                }
+    
+                
+        }
+        .time {
+            grid-area: time;
+            
+            &_container{
+                background: $primary-color;
+                color: $text-white;
+            }
+        }
+    
+        .balance,
+        .date,
+        .time{
+    
+            width: 25rem;
+            padding: 1rem 3rem;
+    
+            &_container{
+                position: relative;
+                padding: 2rem;
+                box-shadow: 1px 1px 12px #cecece;
+                border-radius: 6px;
+                text-align: center;
+    
+                span {
+                    position: absolute;
+                    top: 5px;
+                    right: 10px;
+                    font-size: 5rem;
+                    opacity: .5;
+                    color: $secondary-color;
+                }
+            }
+        }
+    
+        .days{
+            grid-area: days;
+            display: grid;
+            grid-template-areas: 
+            'date time';
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &_a{
+        display: grid;
+        place-items: center;
+        grid-template-areas: 
+        'send receive airtime bill';
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background: $bg-light;
+
+        .send,
+        .receive,
+        .bill,
+        .airtime {
+            padding: .5rem 1.5rem;
+            border-radius: 5px;
+            span{
+                text-align: center;
+                display: block;
+                // color: $primary-color;
+                padding: .5rem;
+            }
+            
+            i {
+                font-size: 2rem;
+                padding: 1rem;
+                height: 4rem;
+                width: 4rem;
+                text-align: center;
+                background: $primary-color;
+                color: $text-white;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &_t {
+      margin: 2rem;
+      padding: 1rem;
+      border-radius: 5px;
+      background: $bg-light;
+    }
+
+    a{
+        cursor: pointer;
+    }
+}
+
+
+@import '/src/assets/scss/mediaQuery.scss';

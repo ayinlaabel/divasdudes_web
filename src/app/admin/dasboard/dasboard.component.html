@@ -1,0 +1,87 @@
+<section class="dashboard">
+    <div class="dashboard_top">
+        <div class="dashboard_top-short">
+            welcome to admin dashboard
+        </div>
+        <div class="dashboard_top-statistics">
+            <div class="user">
+                <div class="icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="user_stat">
+                    <div class="content">
+                        <h3>{{ users.length }}</h3>
+                        <p>Customer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="weekly">
+                <div class="icon">
+                    <i class="far fa-chart-bar"></i>
+                </div>
+                <div class="user_stat">
+                    <div class="content">
+                        <h3>300</h3>
+                        <p>Savings</p>
+                    </div>
+                </div>
+            </div>
+            <div class="savings">
+                <div class="icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="user_stat">
+                    <div class="content">
+                        <h3>300</h3>
+                        <p>Wallet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dashboard_middle">
+        <div class="dashboard_middle-wallet">
+            <div class="wallet">
+                <div class="wallet_in">
+                    <p>Savings</p>
+                    <h3>4000k</h3>
+                    <div class="icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                </div>
+                <div class="wallet_out">
+                    <p>Wallet</p>
+                    <h3>20k</h3>
+                    <div class="icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="earning">
+                <div class="title">
+                    <p>Payment Method</p>
+                    <div class="daily">
+                        <div class="color"></div>
+                        Daily
+                    </div>
+                    <div class="weekly">
+                        <div class="color"></div>
+                        Weekly
+                    </div>
+                    <div class="monthly">
+                        <div class="color"></div>
+                        Monthly
+                    </div>
+
+                </div>
+                <div class="chart">
+                    <ngx-charts-pie-chart [results]="savings" [doughnut]="true"></ngx-charts-pie-chart>
+                </div>
+            </div>
+
+        </div>
+        <div class="dashboard_middle-income">
+            <app-transaction></app-transaction>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,69 @@
+<div class="profile">
+    <div class="profile_header">
+        <h5>Dashboard > User Profile</h5>
+    </div>
+    <div class="profile_body">
+        <div class="user_profile">
+            <div class="user_profile-header"></div>
+            <div class="profile_picture">
+                <img src="/assets/images/avatar.png" alt="">
+            </div>
+            <div class="user_profile-body">
+
+                <div class="profile-details">
+                    <h2>{{ profile.firstName }} {{ profile.lastName }}</h2>
+                    <p>{{ profile.email }}</p>
+                </div>
+
+                <button class="btn btn-primary btn-isNotMobile" (click)='editProfile()'>Update Profile</button>
+                <button class="btn btn-primary btn-isMobile" (click)='profileMobile()'>Update Profile</button>
+            </div>
+            <div class="user_profile-footer"></div>
+        </div>
+
+        <div class="edit_profile">
+            <div class="edit_profile-header" >
+                <h3>Edit Profile</h3>
+            </div>
+            <form  class="col" (submit)="updateProfile()" >
+                <div class="input-field col-50">
+                    <input type="text" [(ngModel)]="model.firstName" name="firstName" id="" placeholder="First Name" class="name">
+                    <div><span></span></div>
+                </div>
+                <div class="input-field col-50">
+                    <input type="text" [(ngModel)]="model.lastName" name="lastName" id="" placeholder="Last Name" class=".name">
+                    <div><span></span></div>
+                </div>
+                <div class="input-field col-50">
+                    <input type="date" name="dob" id="" [(ngModel)]="model.dob">
+                    <div><span></span></div>
+                </div>
+
+                <div class="input-field col-50" >
+                    <select name="gender" id="" [(ngModel)]="model.gender">
+                        <option  disabled selected>--- Select Gender ---</option>
+                        <option value="Male">Male</option>
+                        <option value="Male">Female</option>
+                    </select>
+                    <div><span></span></div>
+                </div>
+
+                <div class="input-field col-100" >
+                    <input type="email" [(ngModel)]="model.email" name="email" id="" placeholder="Email" disabled>
+                    <div><span></span></div>
+                </div>
+                <div class="input-field col-100">
+                    <select name="paymentMethod" id="" [(ngModel)]="model.paymentMethod">
+                        <option selected>--- Select Payment Method ---</option>
+                        <option value="Daily">Daily</option>
+                        <option value="Weekly">Weekly</option>
+                        <option value="Monthly">Monthly</option>
+                    </select>
+                    <div><span></span></div>
+                </div>
+
+                <button class="btn btn-primary col-100 update">Update</button>
+            </form>
+        </div>
+    </div>
+</div>

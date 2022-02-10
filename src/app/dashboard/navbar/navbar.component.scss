@@ -1,0 +1,143 @@
+//** Import Varaibles
+@import '/src/assets/scss/colors';
+
+
+.nav {
+
+
+
+    &_side {
+        position: fixed;
+        scroll-behavior: auto;
+        top: 0;
+        left: 0;
+        width: 15rem;
+        height: 100vh;
+        z-index: 1;
+        // padding: 1rem;
+        background: $primary-color;
+        color: #fff;
+        overflow: hidden;
+        overflow-y: scroll;
+        transition: all .6s ease-in-out;
+
+        // &-header {
+        //     background: $secondary-color;
+        // }
+
+        &.show {
+            width: 15rem!important;
+        }
+
+    
+    }
+
+    .profile {
+        height: 10rem;
+        width: 15rem;
+        display: grid;
+        place-items: center;
+        margin-top: 2rem;
+
+        &_picture {
+            height: 8rem;
+            width: 8rem;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            margin-bottom: 1rem;
+            
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        &_detail {
+            text-align: center;
+            p {
+                line-height: .3;
+            }
+        }
+    }
+
+    .navbar {
+        padding-top: 4rem;
+
+        &_item {
+
+            .nav_link {
+                display: flex;
+                grid-template-areas: 
+                'nav_link-icon nav_link-title';
+                padding: .5rem;
+                margin: 1rem .5rem;
+                border-radius: 5px;
+                align-items: center;
+                justify-content: center;
+
+                color: $text-white;
+
+                &-icon {
+                    padding-right: 1rem;
+                    width: 2rem;
+                    transition: all .6s ease-in-out;
+                    
+                    i {
+                        font-size: 1.2rem;
+                        transition: all .6s ease-in-out;
+                        
+                    }
+
+                    &.show {
+
+                        i {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+
+                &-title {
+                    display: inline-block;
+                    text-align: left;
+                    width: 10rem;
+                    padding: .6rem 1rem;
+                }
+
+                &:hover{
+                    background: darken($primary-color, 17);
+
+                    .nav_link-title {
+                        font-weight: 600;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.icon_btn {
+    cursor: pointer;
+    text-align: right;
+    padding: 1rem;
+    transition: all .6s ease-in-out;
+    
+    & .fa-arrow-alt-circle-right {
+        transition: all .6s ease-in-out;    
+        font-size: 1.5rem;
+        padding-right: .4rem;
+        
+        &.show{
+            font-size: 2rem;
+            text-align: right;
+            transform: rotate(180deg);
+        }
+    }
+
+    &.show{
+        padding: .7rem;
+    }
+}
+
+@import '/src/assets/scss/mediaQuery.scss';
