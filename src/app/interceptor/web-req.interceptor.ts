@@ -33,7 +33,7 @@ export class WebReqInterceptor implements HttpInterceptor {
 
         if(error.status === 0){
            //0 error so we are not connected yet
-          this.messages = 'Check your internet connection.'
+          this.messages = 'Check your internet connection / Contact Administrator.'
           const msg =  this.messages;
           // this.toastService.sendMessage(msg)
           this.toastr.error(msg)

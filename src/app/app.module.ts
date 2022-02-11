@@ -27,7 +27,9 @@ import { ShareModule } from './share/share.module';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot({
+      preventDuplicates: true,
+    }),
     NgxChartsModule,
     BrowserAnimationsModule,
     ShareModule

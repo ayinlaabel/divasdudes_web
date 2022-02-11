@@ -1,0 +1,65 @@
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media screen and (min-width: 320px) and (max-width: 576px) { 
+    .signup {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        overflow: hidden;
+    
+        &_container {
+            display: grid;
+            place-items: center;
+            grid-template-columns: [full-start] minmax(0px, min-content) [main-start] 1fr [main-end] minmax(100%, min-content) [full-end];
+            background: rgba(0, 0, 0, .8);
+            width: 90%;
+        }
+
+        
+    
+        &_details {
+            grid-area: main-start / main-end;
+            grid-row: 1 / -1;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 4px;    
+        }
+    }
+
+    .col{
+
+
+        & &-50{
+            width: 100%;
+        }
+
+    }
+
+
+    .w-50 {
+        width: 100%;
+    }
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media screen and (min-width: 577px) and (min-width: 768px) { 
+    
+ }
+
+// Large devices (desktops, 992px and up)
+@media screen and (min-width: 993px) and (min-width: 992px) { 
+    
+ }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+    
+ }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { 
+    
+ }

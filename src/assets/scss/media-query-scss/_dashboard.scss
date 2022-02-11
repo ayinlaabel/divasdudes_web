@@ -25,6 +25,10 @@
             
         }
     
+        .jw-navbar{
+            display: none;
+        }
+
         .jw-nav_top {
             display: none;
             position: fixed;
@@ -58,7 +62,7 @@
 
         .isMobile {
             height: 100%;
-            // position: relative;
+            display: block;
             padding: 0;
             
             .menu-btn {
